@@ -1,0 +1,10 @@
+{
+  "name": "hw",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "surya",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-react": "^6.24.1"
+  }
+}
