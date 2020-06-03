@@ -7,9 +7,15 @@ var add1 = function add1() {
     console.log("add" + cnt);
 };
 var sub1 = function sub1() {
-    cnt--;
+    if (cnt >= 0) {
+        cnt--;
+    }
     ren();
     console.log("sub");
+};
+var res = function res() {
+    cnt = 0;
+    ren();
 };
 var ren = function ren() {
     var tem = React.createElement(
@@ -30,6 +36,11 @@ var ren = function ren() {
             "button",
             { onClick: sub1 },
             "sub 1"
+        ),
+        React.createElement(
+            "button",
+            { onClick: res },
+            "reset"
         )
     );
     var approot = document.getElementById("app");
