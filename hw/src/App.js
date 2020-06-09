@@ -6,7 +6,7 @@ function App() {
     <div id="surya">
           <h1>Login</h1>
           <form>
-             <label>password:</label>
+             <label className="prak">password:</label>
             <input type="text" name="password" />
             <input type="submit" value="Submit" />
           </form>
