@@ -3,12 +3,22 @@ import './App.css';
 
 function App() {
   return (
-    <div id="surya">
-          <h1>Login</h1>
+    <div id="surya" className="container-fluid">
+          <h1 className="title">Login</h1>
           <form>
-             <label className="prak">password:</label>
-            <input type="text" name="password" />
-            <input type="submit" value="Submit" />
+          <label className="index">login as: </label>
+            <select id="login" className="options">
+              <option>admin</option>
+              <option>delivery</option>
+            </select>
+            <br />
+            <br />
+             <label className="index">password:</label>
+              <input type="text" classname="pass" name="password" />
+              
+            <br />
+            <button type="submit" className="but">submit</button>
+            
           </form>
         </div>
   );

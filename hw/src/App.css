@@ -1,6 +1,58 @@
-.prak{
-  color: #49ac03;
-}
+
+
 h1{
-  color: #49ac03;
+  align-content: flex-start;
+  color: white;
+  /*margin*/
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 0px;
+  width: 100%;
+  /*padding*/
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 80px;
+  border: none;
+  cursor: pointer;
+  background-color: #4CAF50;
+}
+.options{
+  color: #4CAF50;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 0px;
+  margin-left: 0px;
+  
+}
+.pass{  
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 80px;
+  margin-left: 80px;
+}*
+.index{
+  color: #4CAF50;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 50px;
+  margin-left: 80px;
+}
+.but{
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 10px;
+  padding: 14px 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 150px;
+  margin-left: 100px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0.9;
 }
