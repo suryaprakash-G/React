@@ -1,12 +1,15 @@
 import React from 'react';
-import './App.css';
+import '../style/login.css';
+//const adminpass="surya";
+//const delivpass="prakash";
 
-function App() {
-  return (
-    <div id="surya" className="container-fluid">
-          <h1 className="title">Login</h1>
+class Login extends React.Component{
+  render(){
+    return(
+    <div id="surya" className="container">
+          
           <form>
-          <label className="index">login as: </label>
+            <label className="index">login as: </label>
             <select id="login" className="options">
               <option>admin</option>
               <option>delivery</option>
@@ -14,14 +17,14 @@ function App() {
             <br />
             <br />
              <label className="index">password:</label>
-              <input type="text" classname="pass" name="password" />
+            <input type="text" className="pass" name="password" />
               
             <br />
             <button type="submit" className="but">submit</button>
             
           </form>
         </div>
-  );
+    )
+  }
 }
-
-export default App;
+export default Login;
