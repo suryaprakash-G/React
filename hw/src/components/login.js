@@ -4,9 +4,12 @@ import '../style/login.css';
 //const delivpass="prakash";
 
 class Login extends React.Component{
+  login=()=>{
+    
+  }
   render(){
     return(
-    <div id="surya" className="container">
+    <div className="container">
           
           <form>
             <label className="index">login as: </label>
@@ -20,7 +23,7 @@ class Login extends React.Component{
             <input type="text" className="pass" name="password" />
               
             <br />
-            <button type="submit" className="but">submit</button>
+            <button type="submit" onClick={this.login} className="but">submit</button>
             
           </form>
         </div>
