@@ -1,5 +1,6 @@
 import React from 'react';
 import '../style/login.css';
+import { CookiesProvider } from 'react-cookie';
 //const adminpass="surya";
 //const delivpass="prakash";
 
