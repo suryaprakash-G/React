@@ -6,8 +6,23 @@ import '../style/login.css';
 //const delivpass="prakash";
 
 class Login extends React.Component{
+
+  state = {
+    user: '',
+    pass:''
+  }
+  handleSubmit = event => {
+    event.preventDefault();
+    const log = {
+      user: this.state.user,
+      pass: this.state.pass
+    }}
   login=()=>{
-    
+    axios.post(`127.0.0.1/store/api/login.php`,{log})
+    .then(res => {
+      const persons = res.data;
+      this.setState({ persons });
+    })
   }
   render(){
     return(
@@ -30,6 +45,6 @@ class Login extends React.Component{
           </form>
         </div>
     )
-  }
+  };
 }
 export default Login;
