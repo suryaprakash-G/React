@@ -1,13 +1,9 @@
 import React from 'react';
-import Login from './components/login';
-import Orders from './components/orders';
+import approuter from './components/routes';
 var login=false;
 class App extends React.Component{
     render(){
-    if(login==false)
-        return( <Login />)
-    else
-        return( <Orders /> )
+        <approuter/>
     }
 }  
 export default App;
