@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './style/index.css';
 import App from './app';
 
+import AppRouter from './components/routes';
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <AppRouter />
+  ,
   document.getElementById('root')
 );
 
