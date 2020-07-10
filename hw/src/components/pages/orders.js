@@ -5,6 +5,7 @@ class Orders extends React.Component{
         return(
             <div className="del">
             <div className="side nav"></div>
+            <div className="side nav"></div>
             </div>
         )
     }
