@@ -1,16 +1,22 @@
 import React from 'react';
+import Orders from './orders';
 import '../../style/login.css';
+import { useHistory } from "react-router-dom";
 //import { CookiesProvider } from 'react-cookie';
 //import axios from 'axios';
-//const adminpass="surya";
+const adminpass="surya";
 //const delivpass="prakash";
 
 class Login extends React.Component{
 login(event){
+  const history = useHistory();
   event.preventDefault();
   const opt=event.currentTarget.password.value.trim();
-  if(opt){
-    alert(opt)
+  if(opt=== adminpass){
+    //history.push("/orders");
+    var loginscreen=[];
+      loginscreen.push(<Orders parentContext={this} />);
+    alert(opt);
   }
 }
 render(){return( 
@@ -24,8 +30,8 @@ render(){return(
         </select>
         <br />
         <br />
-         <label className="index">password:</label>
-        <input type="text" className="pass" name="password" />
+         <label className="index" >password:</label>
+        <input type="password" className="pass" name="password" />
           
         <br />
         
