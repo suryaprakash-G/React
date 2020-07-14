@@ -9,15 +9,17 @@ const adminpass="surya";
 
 class Login extends React.Component{
 login(event){
-  const history = useHistory();
+  //const history = useHistory();
   event.preventDefault();
   const opt=event.currentTarget.password.value.trim();
-  if(opt=== adminpass){
+  if(opt== adminpass){
     //history.push("/orders");
-    var loginscreen=[];
-      loginscreen.push(<Orders parentContext={this} />);
+    //var loginscreen=[];
+      //loginscreen.push(<Orders parentContext={this} />);
     alert(opt);
   }
+
+  //alert("srya");
 }
 render(){return( 
   <div className="container">
@@ -35,7 +37,7 @@ render(){return(
           
         <br />
         
-        <button type="submit" className="but">submit</button>
+        <button type="submit" className="but" onClick={this.login}>submit</button>
       </form>
     </div>);
 }
