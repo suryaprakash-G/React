@@ -6,12 +6,13 @@ import { useHistory } from "react-router-dom";
 //import axios from 'axios';
 const adminpass="surya";
 //const delivpass="prakash";
-
+var passlen;
 class Login extends React.Component{
-login(event){
+  login(event){ 
   //const history = useHistory();
   event.preventDefault();
   const opt=event.currentTarget.password.value.trim();
+
   if(opt== adminpass){
     //history.push("/orders");
     //var loginscreen=[];
@@ -19,8 +20,12 @@ login(event){
     alert(opt);
   }
 
-  //alert("srya");
 }
+passval(event) {
+  const opt=event.currentTarget.password.value.trim();
+  passlen=opt.length;
+  }
+
 render(){return( 
   <div className="container">
   <h1 className="title">Login</h1>
@@ -33,13 +38,21 @@ render(){return(
         <br />
         <br />
          <label className="index" >password:</label>
-        <input type="password" className="pass" name="password" />
+         <invalid len={passlen}/>
+        <input onChange={this.passval} type="password" className="pass" name="password" />
           
         <br />
         
-        <button type="submit" className="but" onClick={this.login}>submit</button>
+        <button type="submit" className="but" >submit</button>
       </form>
     </div>);
 }
+}
+function invalid(props) {
+ if(props.len<5){return(
+  <div className="passchk">invalid password</div>)}
+  else{
+    return (<div/>);
+  }
 }
 export default Login;
