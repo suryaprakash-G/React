@@ -1,5 +1,6 @@
 import React from 'react';
 import Orders from './orders';
+import Inval from '../inval';
 import '../../style/login.css';
 import { useHistory } from "react-router-dom";
 //import { CookiesProvider } from 'react-cookie';
@@ -7,26 +8,40 @@ import { useHistory } from "react-router-dom";
 const adminpass="surya";
 //const delivpass="prakash";
 var passlen;
-class Login extends React.Component{
-  login(event){ 
-  //const history = useHistory();
-  event.preventDefault();
-  const opt=event.currentTarget.password.value.trim();
 
+class Login extends React.Component{
+  constructor(props){
+    super(props);
+    this.state={
+    user:'',
+    pass:''
+    }
+    this.passval= this.passval.bind(this);
+
+  }
+  login(event){ 
+   let history = useHistory();
+  const opt=event.currentTarget.password.value.trim();
   if(opt== adminpass){
-    //history.push("/orders");
+    history.push("/orders");
     //var loginscreen=[];
       //loginscreen.push(<Orders parentContext={this} />);
-    alert(opt);
+    alert("success");
   }
-
+  event.preventDefault();
 }
 passval(event) {
-  const opt=event.currentTarget.password.value.trim();
-  passlen=opt.length;
+ // const opt=event.currentTarget.password.value.trim();
+ //const opt=newval; 
+ //passlen=opt.length;
+ this.setState({ pass: event.currentTarget.value});
+ console.log(event.currentTarget.value);
   }
 
-render(){return( 
+render(){
+
+
+  return( 
   <div className="container">
   <h1 className="title">Login</h1>
       <form onSubmit={this.login}>
@@ -39,20 +54,14 @@ render(){return(
         <br />
          <label className="index" >password:</label>
          <invalid len={passlen}/>
-        <input onChange={this.passval} type="password" className="pass" name="password" />
-          
+        <input value={this.state.pass} onChange={this.passval } type="password" className="pass" name="password" />
+          <inval pass="pakki"/>
         <br />
-        
+        <Inval pass={this.state.pass}/>
         <button type="submit" className="but" >submit</button>
       </form>
     </div>);
 }
 }
-function invalid(props) {
- if(props.len<5){return(
-  <div className="passchk">invalid password</div>)}
-  else{
-    return (<div/>);
-  }
-}
+
 export default Login;
