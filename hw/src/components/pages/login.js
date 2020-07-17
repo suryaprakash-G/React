@@ -7,14 +7,14 @@ import { useHistory } from "react-router-dom";
 //import axios from 'axios';
 const adminpass="surya";
 //const delivpass="prakash";
-var passlen;
 
 class Login extends React.Component{
   constructor(props){
     super(props);
     this.state={
     user:'',
-    pass:''
+    pass:'',
+    passlen:'6'
     }
     this.passval= this.passval.bind(this);
 
@@ -31,10 +31,8 @@ class Login extends React.Component{
   event.preventDefault();
 }
 passval(event) {
- // const opt=event.currentTarget.password.value.trim();
- //const opt=newval; 
- //passlen=opt.length;
  this.setState({ pass: event.currentTarget.value});
+ this.setState({ passlen: event.currentTarget.value.length});
  console.log(event.currentTarget.value);
   }
 
@@ -53,9 +51,11 @@ render(){
         <br />
         <br />
          <label className="index" >password:</label>
-         <invalid len={passlen}/>
+         <invalid len={this.state.passlen}/>
         <input value={this.state.pass} onChange={this.passval } type="password" className="pass" name="password" />
-          <inval pass="pakki"/>
+         {
+           (this.state.passlen<5)?
+        (<div className="passchk">invalid password</div>):(<div/>)}
         <br />
         <Inval pass={this.state.pass}/>
         <button type="submit" className="but" >submit</button>
