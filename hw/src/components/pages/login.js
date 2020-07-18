@@ -37,9 +37,10 @@ passval(event) {
   }
 
 render(){
-  return( 
-  <div className="container">
-  <h1 className="title">Login</h1>
+  return( <div>
+    <h1 className="title">Login</h1>
+    <div  className="jumbotron-fluid">
+    <div className="container-fluid">
       <form onSubmit={this.login}>
         <label className="index">login as: </label>
         <select id="login" className="options">
@@ -58,7 +59,7 @@ render(){
         <Inval pass={this.state.pass}/>
         <button type="submit" className="but" >submit</button>
       </form>
-    </div>);
+    </div></div></div>);
 }
 }
 

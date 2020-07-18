@@ -5,11 +5,9 @@ import './style/index.css';
 import Routes from './components/routes';
 ReactDOM.render(
   <BrowserRouter>
-  <div>
     <Switch>
     <Routes />
     </Switch>
-      </div>
     </BrowserRouter>
   ,
   document.getElementById('root')
