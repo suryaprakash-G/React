@@ -2,13 +2,15 @@ import React from 'react';
 import Orders from './orders';
 import Inval from '../inval';
 import '../../style/login.css';
-import { useHistory } from "react-router-dom";
+import history from '../history';
+
 //import { CookiesProvider } from 'react-cookie';
 //import axios from 'axios';
 const adminpass="surya";
 //const delivpass="prakash";
 
 class Login extends React.Component{
+  
   constructor(props){
     super(props);
     this.state={
@@ -20,12 +22,10 @@ class Login extends React.Component{
 
   }
   login(event){ 
-   let history = useHistory();
   const opt=event.currentTarget.password.value.trim();
   if(opt== adminpass){
     history.push("/orders");
-    //var loginscreen=[];
-      //loginscreen.push(<Orders parentContext={this} />);
+    this.props.history.push('/Orders');
     alert("success");
   }
   event.preventDefault();
@@ -37,8 +37,6 @@ passval(event) {
   }
 
 render(){
-
-
   return( 
   <div className="container">
   <h1 className="title">Login</h1>
