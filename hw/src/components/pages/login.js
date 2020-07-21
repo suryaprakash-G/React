@@ -1,5 +1,4 @@
 import React from 'react';
-import Orders from './orders';
 import Inval from '../inval';
 import '../../style/login.css';
 import history from '../history';
@@ -25,7 +24,7 @@ class Login extends React.Component{
   const opt=event.currentTarget.password.value.trim();
   if(opt== adminpass){
     history.push("/orders");
-    this.props.history.push('/Orders');
+    this.props.history.push('/dash');
     alert("success");
   }
   event.preventDefault();

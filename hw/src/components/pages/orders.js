@@ -4,15 +4,16 @@ import '../../style/orders.css';
 class Orders extends React.Component{
     render(){
         return(
-            <div className="ord-pg">
-            <div className="row flex-container">
-            <Sidenav/>
-            <div className="bdy col-sm-10">
+        <div className="ord-page">
+        <div className="row flex-container">
+            <div className="col-md-2 no-float side">
+                <Sidenav/>
+            </div>
+            <div className="col-md-9 no-float">
             <h1 className="title-page">Orders</h1>
-            orders
             </div>
-            </div>
-            </div>
+        </div>
+    </div>
         )
     }
 }

@@ -1,18 +1,32 @@
+html,body,.container-fluid {
+  height:100%;
+}
+.title-page{
+  text-align: left;
+  padding-left: 10% ;
+  margin: 0%;
+  height: 80px;
 
+}
+.container-fluid {
+  display:table;
+  width: 100%; /*set left/right padding according to needs*/
+  box-sizing: border-box;
+}
 
-  .bdy{
-    margin-left: 120pt;
-    padding-left: 50pt;
-    background-color:rgb(255, 255, 255);
-    border-style:solid;
-    border-color: rgba(76, 175, 80,1 );
-    border-width: 5px;
-    border-radius: 10px;;
-  }
-  .row{
-    align-items: stretch;
-  }
-  .flex-container {
-    display: flex;
-    flex-direction: row;
-  }
+.row {
+  
+  height: 100%;
+  width: 100%;
+}
+
+.row .no-float {
+  padding: 0%;
+display: table-cell;
+float: none;
+}
+.side{
+  margin-left: 1%;
+  padding: 0%;
+  background-color: #4CAF50;}
+.ord-page{height: 100%;}

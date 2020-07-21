@@ -1,4 +1,24 @@
 .sidenav {
-    background-color: rgb(76, 175, 80);  
-    position: fixed; /* Stay in place */
+    position: fixed;
+    font-size: 200%;
+    text-align: center;
+    align-content: center;
+    background-color: #4CAF50;
+}
+.logo{
+    color: #fff;
+    font-size: 200%;
+    padding: 3%;
+}
+.logo2{
+    color: #fff;
+    font-size: 70%;
+    padding: 3%;
+    padding-bottom: 90%;
+}
+.table{
+    align-self: center;
+    color: #fff;
+    margin: auto 2px;
+    
 }
