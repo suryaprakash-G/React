@@ -1,0 +1,32 @@
+html,body,.container-fluid {
+    height:100%;
+  }
+  .title-page{
+    text-align: left;
+    padding-left: 10% ;
+    margin: 0%;
+    height: 80px;
+    color: #4CAF50;
+  }
+  
+  .container-fluid {
+    display:table;
+    width: 100%; /*set left/right padding according to needs*/
+    box-sizing: border-box;
+  }
+  
+  .row {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .row .no-float {
+    padding: 0%;
+  display: table-cell;
+  float: none;
+  }
+  
+  .side{
+    margin-left: 0%;
+    background-color: #4CAF50;}
+  .inv-page{height: 100%;}
